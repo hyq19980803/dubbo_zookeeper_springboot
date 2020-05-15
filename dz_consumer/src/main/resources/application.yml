@@ -1,0 +1,14 @@
+server:
+  port: 7070
+
+spring:
+  dubbo:
+    application:
+      #应用名
+      name: consumer
+    #zookeeper的注册地址
+    registry:
+      address: zookeeper://127.0.0.1:2181
+    ## Dubbo 服务消费者配置
+    #将消费者的控制层路径映射到dubbo中并由它管理
+    scan: com.java.consumer.controller
